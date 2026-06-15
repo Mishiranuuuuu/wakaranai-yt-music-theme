@@ -182,3 +182,9 @@ ytmusic-two-row-item-renderer .image-wrapper {
   background: transparent !important;
   background-color: transparent !important;
 }
+
+/* Fix buttons hidden by Better Lyrics Shader */
+ytmusic-chip-cloud-renderer {
+  position: relative !important;
+  z-index: 10 !important;
+}
