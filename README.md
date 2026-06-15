@@ -24,7 +24,10 @@ A **glassmorphism** custom CSS theme for [YouTube Music](https://music.youtube.c
 ![Player view showing related songs and artists](img/player-more.png)
 
 ### Player - Fullscreen
-![Player view showing related songs and artists](img/player-fullscreen.png)
+![Player view in fullcreen](img/player-fullscreen.png)
+
+### Player - Fullscreen - No Lyrics
+![Player view in fullcreen without lyrics](img/player-fullscreen-no-lyrics.png)
 
 ---
 
