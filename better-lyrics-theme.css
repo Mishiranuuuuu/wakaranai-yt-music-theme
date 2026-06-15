@@ -163,7 +163,7 @@ ytmusic-responsive-list-item-renderer {
 ytmusic-two-row-item-renderer:hover,
 ytmusic-responsive-list-item-renderer:hover {
   background: rgba(255, 255, 255, 0.08) !important;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
@@ -186,12 +186,11 @@ ytmusic-two-row-item-renderer .image-wrapper {
 /* Fix buttons hidden by Better Lyrics Shader */
 ytmusic-chip-cloud-renderer {
   position: relative !important;
-  z-index: 10 !important;
 }
 
 /* ===== Responsive Design ===== */
 
-/* Tablet (≤1024px) */
+/* ≤1024px */
 @media screen and (max-width: 1024px) {
   :root {
     --blyrics-blur-amount: 16px;
@@ -216,7 +215,7 @@ ytmusic-chip-cloud-renderer {
   }
 }
 
-/* Small tablet / large phone (≤768px) */
+/* ≤768px */
 @media screen and (max-width: 768px) {
   :root {
     --blyrics-blur-amount: 12px;
@@ -251,7 +250,7 @@ ytmusic-chip-cloud-renderer {
   }
 }
 
-/* Mobile (≤480px) */
+/* ≤480px */
 @media screen and (max-width: 480px) {
   :root {
     --blyrics-blur-amount: 10px;
