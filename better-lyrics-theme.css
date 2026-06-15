@@ -1,0 +1,184 @@
+/* Theme for Better lyrics*/
+
+/* Noto Sans - All languages */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;700&display=swap");
+
+:root {
+  /* -- [ Glassmorphism & Effects ] -- */
+  --blyrics-bg-color: rgba(0, 0, 0, 0.25);
+  --blyrics-border-radius: 18px;
+  --blyrics-box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 255, 255, 0.12) inset;
+  --blyrics-blur-amount: 20px;
+  --blyrics-background-filter: blur(70px) saturate(3) brightness(70%);
+
+  /* -- [ Font ] -- */
+  --blyrics-font-family: "Noto Sans", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", system-ui, sans-serif;
+}
+
+/* Apply Noto Sans globally */
+ytmusic-app,
+ytmusic-app * {
+  font-family: var(--blyrics-font-family) !important;
+}
+
+/* Round the player cover art*/
+ytmusic-player:not([video-mode]) {
+  border-radius: 16px !important;
+  box-shadow: 5px 3px 15px rgba(0, 0, 0, 0.333) !important;
+  overflow: hidden !important;
+}
+
+ytmusic-player:not([video-mode]):hover {
+  box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+ytmusic-player:not([video-mode]):active {
+  box-shadow: 5px 3px 25px rgba(0, 0, 0, 1) !important;
+}
+
+/* Side Panel - Glassmorphism */
+#side-panel,
+.side-panel.ytmusic-player-page {
+  padding: 15px 15px 15px 15px !important;
+  backdrop-filter: blur(var(--blyrics-blur-amount)) !important;
+  -webkit-backdrop-filter: blur(var(--blyrics-blur-amount)) !important;
+  background-color: var(--blyrics-bg-color) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: var(--blyrics-border-radius) !important;
+  box-shadow: var(--blyrics-box-shadow) !important;
+  overflow: hidden !important;
+  max-height: 640px !important;
+  height: 640px !important;
+}
+
+/* Make inner panels/tabs transparent so glass shows through (exclude buttons) */
+.side-panel.ytmusic-player-page ytmusic-tab-renderer,
+.side-panel.ytmusic-player-page #tab-renderer,
+.side-panel.ytmusic-player-page #tabsContent,
+.side-panel.ytmusic-player-page ytmusic-section-list-renderer,
+.side-panel.ytmusic-player-page #contents,
+.side-panel.ytmusic-player-page ytmusic-shelf-renderer,
+.side-panel.ytmusic-player-page #header,
+.side-panel.ytmusic-player-page ytmusic-responsive-list-item-renderer,
+.side-panel.ytmusic-player-page ytmusic-playlist-panel-renderer,
+.side-panel.ytmusic-player-page #automix-contents,
+ytmusic-player-page[player-fullscreened] .side-panel {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Tab header bar - transparent with subtle separator */
+.tab-header.ytmusic-player-page,
+#tabsContent,
+tp-yt-paper-tabs {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Better Lyrics container - transparent */
+.blyrics-container {
+  background: transparent !important;
+}
+
+/* Menus & dropdowns */
+tp-yt-paper-listbox,
+.ytmusicMultiPageMenuRendererHost {
+  backdrop-filter: blur(var(--blyrics-blur-amount)) !important;
+  background-color: var(--blyrics-bg-color) !important;
+  border-radius: var(--blyrics-border-radius) !important;
+}
+
+/* Search box */
+ytmusic-search-box[is-bauhaus-sidenav-enabled] #suggestion-list.ytmusic-search-box,
+ytmusic-search-box[is-bauhaus-sidenav-enabled][opened] .search-box.ytmusic-search-box {
+  --ytmusic-search-background: transparent !important;
+  background: rgba(33, 33, 33, 0.85) !important;
+  backdrop-filter: blur(var(--blyrics-blur-amount)) !important;
+  box-shadow: var(--blyrics-box-shadow);
+  border-radius: var(--blyrics-border-radius) !important;
+}
+
+ytmusic-search-suggestion {
+  color: rgb(255 255 255 / 90%);
+}
+
+/* ===== Bottom Player Bar - Glassmorphism ===== */
+ytmusic-player-bar,
+#player-bar-background,
+#nav-bar-background {
+  backdrop-filter: blur(var(--blyrics-blur-amount)) !important;
+  -webkit-backdrop-filter: blur(var(--blyrics-blur-amount)) !important;
+  background: var(--blyrics-bg-color) !important;
+  background-color: var(--blyrics-bg-color) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Make inner player bar elements transparent */
+ytmusic-player-bar .middle-controls,
+ytmusic-player-bar .left-controls,
+ytmusic-player-bar .right-controls,
+ytmusic-player-bar #left-controls,
+ytmusic-player-bar #right-controls {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Progress bar area */
+#progress-bar.ytmusic-player-bar,
+tp-yt-paper-slider {
+  background-color: transparent !important;
+}
+
+ytmusic-pivot-bar-renderer #background,
+ytmusic-pivot-bar-renderer #contentContainer,
+ytmusic-pivot-bar-item-renderer {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* ===== Sidebar fully transparent on player page ===== */
+ytmusic-app-layout[player-visible] ytmusic-guide-renderer,
+ytmusic-app-layout[player-visible] ytmusic-pivot-bar-renderer,
+ytmusic-app-layout[player-visible] #guide-wrapper,
+ytmusic-app-layout[player-visible] #guide-inner-content,
+ytmusic-app-layout[player-visible] ytmusic-guide-entry-renderer,
+ytmusic-app-layout[player-visible] ytmusic-pivot-bar-item-renderer {
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Album/playlist cards - rounded with subtle glass */
+ytmusic-two-row-item-renderer,
+ytmusic-responsive-list-item-renderer {
+  border-radius: 12px !important;
+  padding: 10px !important;
+  transition: all 0.3s ease !important;
+}
+
+ytmusic-two-row-item-renderer:hover,
+ytmusic-responsive-list-item-renderer:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Card thumbnail images - rounded corners */
+ytmusic-two-row-item-renderer #thumbnail-container,
+ytmusic-two-row-item-renderer img,
+ytmusic-thumbnail-renderer img {
+  border-radius: 12px !important;
+}
+
+ytmusic-two-row-item-renderer #thumbnail-container,
+ytmusic-two-row-item-renderer ytmusic-thumbnail-renderer,
+ytmusic-two-row-item-renderer .image-wrapper {
+  overflow: hidden !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
