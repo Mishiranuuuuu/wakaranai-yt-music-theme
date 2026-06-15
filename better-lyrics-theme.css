@@ -183,6 +183,35 @@ ytmusic-two-row-item-renderer .image-wrapper {
   background-color: transparent !important;
 }
 
+/* Override the dark overlay gradient variable */
+ytmusic-item-thumbnail-overlay-renderer,
+ytmusic-item-thumbnail-overlay-renderer #background {
+  --ytmusic-background-overlay-background: transparent !important;
+  background: rgba(0, 0, 0, 0.25) !important;
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  border-radius: 12px !important;
+  background-image: none !important;
+}
+
+ytmusic-responsive-list-item-renderer #thumbnail-container {
+  overflow: hidden !important;
+  border-radius: 8px !important;
+}
+
+/* Hide play button on thumbnails, show on hover */
+ytmusic-two-row-item-renderer .thumbnail-overlay,
+ytmusic-two-row-item-renderer ytmusic-thumbnail-overlay-toggle-button-renderer,
+ytmusic-two-row-item-renderer .hover-container {
+  opacity: 0 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+ytmusic-two-row-item-renderer:hover .thumbnail-overlay,
+ytmusic-two-row-item-renderer:hover ytmusic-thumbnail-overlay-toggle-button-renderer,
+ytmusic-two-row-item-renderer:hover .hover-container {
+  opacity: 1 !important;
+}
+
 /* Fix buttons hidden by Better Lyrics Shader */
 ytmusic-chip-cloud-renderer {
   position: relative !important;
