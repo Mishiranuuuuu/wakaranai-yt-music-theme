@@ -61,8 +61,42 @@ ytmusic-player:not([video-mode]):active {
 .side-panel.ytmusic-player-page #header,
 .side-panel.ytmusic-player-page ytmusic-responsive-list-item-renderer,
 .side-panel.ytmusic-player-page ytmusic-playlist-panel-renderer,
-.side-panel.ytmusic-player-page #automix-contents,
-ytmusic-player-page[player-fullscreened] .side-panel {
+.side-panel.ytmusic-player-page #automix-contents {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* ===== Fullscreen Mode - Side Panel Fix ===== */
+ytmusic-player-page[player-fullscreened] .side-panel,
+ytmusic-player-page[player-fullscreened] #side-panel {
+  background-color: var(--blyrics-bg-color) !important;
+  background: var(--blyrics-bg-color) !important;
+  backdrop-filter: blur(var(--blyrics-blur-amount)) !important;
+  -webkit-backdrop-filter: blur(var(--blyrics-blur-amount)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: var(--blyrics-border-radius) !important;
+  box-shadow: var(--blyrics-box-shadow) !important;
+  height: auto !important;
+  max-height: 100% !important;
+  margin-top: 40px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding: 15px !important;
+  box-sizing: border-box !important;
+}
+
+/* Fullscreen inner elements stay transparent */
+ytmusic-player-page[player-fullscreened] .side-panel ytmusic-tab-renderer,
+ytmusic-player-page[player-fullscreened] .side-panel #tab-renderer,
+ytmusic-player-page[player-fullscreened] .side-panel #tabsContent,
+ytmusic-player-page[player-fullscreened] .side-panel ytmusic-section-list-renderer,
+ytmusic-player-page[player-fullscreened] .side-panel #contents,
+ytmusic-player-page[player-fullscreened] .side-panel ytmusic-shelf-renderer,
+ytmusic-player-page[player-fullscreened] .side-panel #header,
+ytmusic-player-page[player-fullscreened] .side-panel ytmusic-responsive-list-item-renderer,
+ytmusic-player-page[player-fullscreened] .side-panel ytmusic-playlist-panel-renderer,
+ytmusic-player-page[player-fullscreened] .side-panel #automix-contents,
+ytmusic-player-page[player-fullscreened] .side-panel .blyrics-container {
   background-color: transparent !important;
   background: transparent !important;
 }
