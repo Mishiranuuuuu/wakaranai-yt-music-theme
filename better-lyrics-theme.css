@@ -93,7 +93,7 @@ tp-yt-paper-listbox,
 ytmusic-search-box[is-bauhaus-sidenav-enabled] #suggestion-list.ytmusic-search-box,
 ytmusic-search-box[is-bauhaus-sidenav-enabled][opened] .search-box.ytmusic-search-box {
   --ytmusic-search-background: transparent !important;
-  background: rgba(33, 33, 33, 0.85) !important;
+  background: rgba(25, 25, 25, 0.75) !important;
   backdrop-filter: blur(var(--blyrics-blur-amount)) !important;
   box-shadow: var(--blyrics-box-shadow);
   border-radius: var(--blyrics-border-radius) !important;
