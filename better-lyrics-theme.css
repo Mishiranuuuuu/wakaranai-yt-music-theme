@@ -283,6 +283,18 @@ ytmusic-chip-cloud-renderer {
   position: relative !important;
 }
 
+/* Hide Scrollbars */
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  background: transparent !important;
+}
+
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
 /* ===== Responsive Design ===== */
 
 /* ≤1024px */
