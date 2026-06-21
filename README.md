@@ -2,6 +2,8 @@
 
 A **glassmorphism** custom CSS theme for [YouTube Music](https://music.youtube.com) + [Better Lyrics](https://github.com/boidushya/better-lyrics) extension — bringing frosted glass panels, rounded corners, smooth hover animations, and multi-language font support to your listening experience. Also recommanded to use with [Better Lyrics shader](https://github.com/boidushya/better-lyrics-shaders).
 
+**There may be a bug when using the Better Lyrics shader and switching to video mode. This can cause a black bar to appear, which may be caused by a rendering issue in the extension and I can't fix it.**
+
 ---
 
 ## Screenshots
